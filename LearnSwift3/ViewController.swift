@@ -20,6 +20,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonAction(_ sender: AnyObject) {
+        
+        APIManager.shared.cardsInformation()  { (backend, error) in
+            
+            if((error) == nil){
+                
+                let basicArray = backend?["Basic"] as! NSArray?
+                
+                for cardsDict in basicArray! {
+                    let dictName = cardsDict as! NSDictionary
+                    let name = dictName["name"] as! String
+                    print("card Name..", name)
+                }
+            }
+            else
+            {
+            }
+        }
+    }
 
 }
 
