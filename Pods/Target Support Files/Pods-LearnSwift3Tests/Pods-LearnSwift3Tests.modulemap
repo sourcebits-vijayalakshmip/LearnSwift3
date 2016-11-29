@@ -1,0 +1,6 @@
+framework module Pods_LearnSwift3Tests {
+  umbrella header "Pods-LearnSwift3Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
