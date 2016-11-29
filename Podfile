@@ -6,6 +6,8 @@ target 'LearnSwift3' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.0'
+  pod 'SDWebImage', '3.8.2'
+
 
   # Pods for LearnSwift3
 

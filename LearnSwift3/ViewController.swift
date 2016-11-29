@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    var  cardTypeArray : NSMutableArray!
-    var  factionArray : NSMutableArray!
-    var  rarityArray : NSMutableArray!
-    var  imageArray : NSMutableArray!
-    var  sectionHeaderArray: NSMutableArray!
-    
-
+    var  cardTypeArray : NSMutableArray?
+    var  factionArray : NSMutableArray?
+    var  rarityArray : NSMutableArray?
+    var  imageArray : NSMutableArray?
+    var  sectionHeaderArray: NSMutableArray?
+    var cardsArray = [Cards]()
+    var getarrays: NSArray?
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -27,6 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        let nib = UINib(nibName: "CollectionSectionHeaderView", bundle: nil)
 //        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
         registerNibs()
+        fetchAllCards()
+
         
     }
 
@@ -35,81 +37,40 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
 
+ 
     
     
-    @IBAction func buttonAction(_ sender: AnyObject) {
+    // API CALL
+    func fetchAllCards() -> Void {
         
         APIManager.shared.cardsInformation()  { (backend, error) in
             
             if((error) == nil){
                 
-                
-                let basicArray = backend?["Basic"] as! NSArray?
-                let classicArray = backend?["Classic"] as! NSArray?
-                /*let promoArray = backend?["Basic"] as! NSArray?
-                let rewardArray = backend?["Basic"] as! NSArray?
-                let naxxaArray = backend?["Basic"] as! NSArray?
-                let goblinsArray = backend?["Basic"] as! NSArray?
-                let blackrocksArray = backend?["Basic"] as! NSArray?
-                let bgrandTournmentArray = backend?["Basic"] as! NSArray?
-                let explorersArray = backend?["Basic"] as! NSArray?
-                let whispersArray = backend?["Basic"] as! NSArray?
-                let karazhanArray = backend?["Basic"] as! NSArray?
-                let taveranArray = backend?["Basic"] as! NSArray?
-                let heroArray = backend?["Basic"] as! NSArray?
-                let misssionsArray = backend?["Basic"] as! NSArray?
-                let creditsArray = backend?["Basic"] as! NSArray?
-                let systemArray = backend?["Basic"] as! NSArray?
-                let debugArray = backend?["Basic"] as! NSArray?*/
+                if let basicArray = backend?["Basic"] as? NSArray{
+                    for cards in basicArray{
+                        let types = Cards(dictionary: cards as! [String : AnyObject])
+                        let factions = Cards(dictionary: cards as! [String : AnyObject])
+                        let rarities = Cards(dictionary: cards as! [String : AnyObject])
+                        let images = Cards(dictionary: cards as! [String : AnyObject])
+         
+                        self.cardsArray.append(types)
+                        self.cardsArray.append(factions)
+                        self.cardsArray.append(rarities)
+                        self.cardsArray.append(images)
 
-                
-                for cardsType in basicArray! {
-                    let dictType = cardsType as! NSDictionary
-                    let allcards = AllCards()
-                    allcards.cardType = dictType["type"] as! String
-                    self.cardTypeArray = NSMutableArray()
-                    self.cardTypeArray?.add(allcards.cardType)
-                    
-                }
-                for cardsFaction in basicArray! {
-                    let dictFaction = cardsFaction as! NSDictionary
-                    let allcards = AllCards()
-                    
-                    if dictFaction["faction"] as? String == nil {
-                        
-                    } else{
-                        allcards.cardFaction = dictFaction["faction"] as? String
-                        self.factionArray = NSMutableArray()
-                        self.factionArray.add(allcards.cardFaction)
                     }
+                    
+                    self.collectionView.reloadData()
                 }
 
-                for cardsRarity in basicArray! {
-                    let dictRarity = cardsRarity as! NSDictionary
-                    let allcards = AllCards()
-                    allcards.cardRarity = dictRarity["rarity"] as! String
-                    self.rarityArray = NSMutableArray()
-                    self.rarityArray.add(allcards.cardRarity)
-                }
-                for cardsImages in basicArray! {
-                    let dictImages = cardsImages as! NSDictionary
-                    
-                    if dictImages["img"] as? String == nil {
-                        
-                    } else{
-                        let allcards = AllCards()
-                        allcards.cardImage = dictImages["img"] as? String
-                        self.imageArray = NSMutableArray()
-                        self.imageArray.add(self.imageArray)
-                     }
-                }
-                
             } else {
                 
             }
-    }
+        }
 
-}
+    }
+    
     
     //PRIVATE
     func registerNibs(){
@@ -117,28 +78,36 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let customCollectionCellNib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
         collectionView.register(customCollectionCellNib, forCellWithReuseIdentifier: "CustomCollectionViewCell")
         
-        
     }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
+    
+    //MARK: - UICOLLECTIONVIEW 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        
-        return self.cardTypeArray.count
+        return self.cardsArray.count
     
     
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
+        let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
-        cell.ibresType.text = self.cardTypeArray?[indexPath.row] as? String
-        return cell
+        let item = self.cardsArray[indexPath.row]
+        customCell.ibresType.text = item.cardType
+        customCell.ibresFaction.text = item.cardFaction
+        customCell.ibresRarity.text = item.cardRarity
+        if item.cardImage == "" {
+            
+        } else{
+            customCell.ibImageView.image = UIImage(named: item.cardImage)
+        }
+        return customCell
         
     }
+
+    
 
 }
 

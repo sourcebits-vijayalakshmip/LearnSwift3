@@ -16,6 +16,7 @@
 		FD23469C1DED5CCD00D0093E /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23469B1DED5CCD00D0093E /* CustomCollectionViewCell.xib */; };
 		FD2346A01DED8BD400D0093E /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD23469F1DED8BD400D0093E /* CollectionSectionHeaderView.xib */; };
 		FD2346A21DED8BF900D0093E /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2346A11DED8BF900D0093E /* CollectionSectionHeaderView.swift */; };
+		FD2346A91DED9E1800D0093E /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2346A81DED9E1800D0093E /* Cards.swift */; };
 		FD7DA4091DED3950009DCF01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA4081DED3950009DCF01 /* AppDelegate.swift */; };
 		FD7DA40B1DED3950009DCF01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7DA40A1DED3950009DCF01 /* ViewController.swift */; };
 		FD7DA40E1DED3950009DCF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7DA40C1DED3950009DCF01 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		FD23469B1DED5CCD00D0093E /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		FD23469F1DED8BD400D0093E /* CollectionSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		FD2346A11DED8BF900D0093E /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
+		FD2346A81DED9E1800D0093E /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		FD7DA4051DED3950009DCF01 /* LearnSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7DA4081DED3950009DCF01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7DA40A1DED3950009DCF01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2346961DED425F00D0093E /* AllCards.swift */,
+				FD2346A81DED9E1800D0093E /* Cards.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				FD2346A21DED8BF900D0093E /* CollectionSectionHeaderView.swift in Sources */,
 				FD2346941DED3CC700D0093E /* APIManager.swift in Sources */,
 				FD23469A1DED5C8100D0093E /* CustomCollectionViewCell.swift in Sources */,
+				FD2346A91DED9E1800D0093E /* Cards.swift in Sources */,
 				FD7DA40B1DED3950009DCF01 /* ViewController.swift in Sources */,
 				FD7DA4381DED3C60009DCF01 /* APIRouter.swift in Sources */,
 				FD7DA4091DED3950009DCF01 /* AppDelegate.swift in Sources */,

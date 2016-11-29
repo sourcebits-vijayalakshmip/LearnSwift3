@@ -12,50 +12,63 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-mY-LbL">
-                    <frame key="frameInset" minX="12" minY="6" width="351" height="114"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-mY-LbL">
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAD-I0-WAV">
-                            <frame key="frameInset" minX="14" minY="14" width="123" height="92"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.61058095637583898" green="0.82707634228187921" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAD-I0-WAV">
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-pl-iAH">
-                            <frame key="frameInset" minX="24" minY="24" width="88" height="21"/>
+                            <frame key="frameInset" minX="5" minY="5" width="172" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-Lb-7dU">
-                            <frame key="frameInset" minX="24" minY="50" width="88" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxV-fs-4ne">
+                            <frame key="frameInset" minX="5" minY="43" width="170" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxV-fs-4ne">
-                            <frame key="frameInset" minX="24" minY="78" width="88" height="21"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-O9-4IC">
+                            <frame key="frameInset" minX="216" minY="26" width="81" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-Lb-7dU">
+                            <frame key="frameInset" minX="5" minY="81" width="165" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" id="8QB-fY-Rnt"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="top" secondItem="Iae-mY-LbL" secondAttribute="top" id="He5-Jn-VxC"/>
+                        <constraint firstAttribute="bottom" secondItem="SAD-I0-WAV" secondAttribute="bottom" id="RGF-vz-eMh"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="leading" secondItem="Iae-mY-LbL" secondAttribute="leading" id="Vha-nZ-Wcm"/>
+                    </constraints>
                 </view>
             </subviews>
+            <constraints>
+                <constraint firstItem="Iae-mY-LbL" firstAttribute="top" secondItem="64O-Yv-dUt" secondAttribute="top" constant="6" id="1BA-zP-7Bg"/>
+                <constraint firstItem="Iae-mY-LbL" firstAttribute="leading" secondItem="64O-Yv-dUt" secondAttribute="leading" constant="12" id="ZVb-Y5-n0i"/>
+                <constraint firstAttribute="bottom" secondItem="Iae-mY-LbL" secondAttribute="bottom" constant="7" id="mCw-vp-Pc1"/>
+                <constraint firstAttribute="trailing" secondItem="Iae-mY-LbL" secondAttribute="trailing" constant="6" id="tca-bd-U18"/>
+            </constraints>
             <connections>
+                <outlet property="ibImageView" destination="DtL-O9-4IC" id="ko7-NK-HGT"/>
                 <outlet property="ibresFaction" destination="EMw-Lb-7dU" id="pMW-9z-vRV"/>
                 <outlet property="ibresRarity" destination="PxV-fs-4ne" id="paB-UA-G7G"/>
                 <outlet property="ibresType" destination="aNX-pl-iAH" id="AW7-lQ-ufV"/>
                 <outlet property="ibtext" destination="SAD-I0-WAV" id="N5d-wk-V1B"/>
             </connections>
-            <point key="canvasLocation" x="-93.5" y="-17.5"/>
+            <point key="canvasLocation" x="-69.5" y="-17.5"/>
         </collectionReusableView>
     </objects>
 </document>
