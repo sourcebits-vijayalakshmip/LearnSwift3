@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9q7-GH-MhS" customClass="CollectionSectionHeaderView" customModule="LearnSwift3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-1y-z84">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="AlX-1y-z84" firstAttribute="leading" secondItem="9q7-GH-MhS" secondAttribute="leading" constant="72" id="GFY-WC-Oa0"/>
+                <constraint firstItem="AlX-1y-z84" firstAttribute="top" secondItem="9q7-GH-MhS" secondAttribute="top" constant="20" id="Hth-9W-uSX"/>
+                <constraint firstAttribute="trailing" secondItem="AlX-1y-z84" secondAttribute="trailing" constant="72" id="dCq-WT-17g"/>
+                <constraint firstAttribute="bottom" secondItem="AlX-1y-z84" secondAttribute="bottom" constant="20" id="tNy-4R-D3s"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ibSectionHeader" destination="AlX-1y-z84" id="7pS-92-kG9"/>
+            </connections>
+            <point key="canvasLocation" x="-179.5" y="-169.5"/>
+        </view>
+    </objects>
+</document>
