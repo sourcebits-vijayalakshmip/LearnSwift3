@@ -15,43 +15,43 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-mY-LbL">
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAD-I0-WAV">
-                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-pl-iAH">
-                            <frame key="frameInset" minX="5" minY="5" width="172" height="25"/>
+                            <frame key="frameInset" minX="157" minY="17" width="170" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxV-fs-4ne">
-                            <frame key="frameInset" minX="5" minY="43" width="170" height="25"/>
+                            <frame key="frameInset" minX="157" minY="43" width="170" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-O9-4IC">
-                            <frame key="frameInset" minX="216" minY="26" width="81" height="68"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-Lb-7dU">
+                            <frame key="frameInset" minX="157" minY="73" width="170" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7Q-UO-QLa">
+                            <frame key="frameInset" minX="31" minY="25" width="87" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-Lb-7dU">
-                            <frame key="frameInset" minX="5" minY="81" width="165" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" id="8QB-fY-Rnt"/>
-                        <constraint firstItem="SAD-I0-WAV" firstAttribute="top" secondItem="Iae-mY-LbL" secondAttribute="top" id="He5-Jn-VxC"/>
-                        <constraint firstAttribute="bottom" secondItem="SAD-I0-WAV" secondAttribute="bottom" id="RGF-vz-eMh"/>
-                        <constraint firstItem="SAD-I0-WAV" firstAttribute="leading" secondItem="Iae-mY-LbL" secondAttribute="leading" id="Vha-nZ-Wcm"/>
+                        <constraint firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" constant="24" id="8QB-fY-Rnt"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="top" secondItem="Iae-mY-LbL" secondAttribute="top" constant="11" id="He5-Jn-VxC"/>
+                        <constraint firstAttribute="bottom" secondItem="SAD-I0-WAV" secondAttribute="bottom" constant="13" id="RGF-vz-eMh"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="leading" secondItem="Iae-mY-LbL" secondAttribute="leading" constant="24" id="Vha-nZ-Wcm"/>
                     </constraints>
                 </view>
             </subviews>
@@ -62,7 +62,7 @@
                 <constraint firstAttribute="trailing" secondItem="Iae-mY-LbL" secondAttribute="trailing" constant="6" id="tca-bd-U18"/>
             </constraints>
             <connections>
-                <outlet property="ibImageView" destination="DtL-O9-4IC" id="ko7-NK-HGT"/>
+                <outlet property="ibImageView" destination="V7Q-UO-QLa" id="hZi-XP-qrd"/>
                 <outlet property="ibresFaction" destination="EMw-Lb-7dU" id="pMW-9z-vRV"/>
                 <outlet property="ibresRarity" destination="PxV-fs-4ne" id="paB-UA-G7G"/>
                 <outlet property="ibresType" destination="aNX-pl-iAH" id="AW7-lQ-ufV"/>

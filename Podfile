@@ -7,6 +7,8 @@ target 'LearnSwift3' do
 
   pod 'Alamofire', '~> 4.0'
   pod 'SDWebImage', '3.8.2'
+  pod 'MBProgressHUD', '~> 1.0'
+
 
 
   # Pods for LearnSwift3

@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    var  cardTypeArray : NSMutableArray?
-    var  factionArray : NSMutableArray?
-    var  rarityArray : NSMutableArray?
-    var  imageArray : NSMutableArray?
     var  sectionHeaderArray: NSMutableArray?
-    var cardsArray = [Cards]()
-    var getarrays: NSArray?
+    var typeArray = [Cards]()
+    var factionArray = [Cards]()
+    var rarityArray = [Cards]()
+    var imageArray = [Cards]()
+    var textArray = [Cards]()
+    
+    var getarrays: NSArray = []
+    var dict: [String] = []
+
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -24,11 +28,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let nib = UINib(nibName: "CollectionSectionHeaderView", bundle: nil)
-//        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
         registerNibs()
+        registerSectionHeaderNIb()
         fetchAllCards()
-
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         
     }
 
@@ -37,15 +41,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
 
- 
-    
-    
-    // API CALL
+     // API CALL
     func fetchAllCards() -> Void {
         
         APIManager.shared.cardsInformation()  { (backend, error) in
-            
+            MBProgressHUD.hide(for: self.view, animated: true)
             if((error) == nil){
+                
+                //let keys = backend?.allKeys
+               // print("The Value Is........ \(keys!)")
+                
+                 self.dict = backend?.allKeys as! [String]
+                
+                self.sectionHeaderArray = NSMutableArray()
+                self.sectionHeaderArray?.addObjects(from: self.dict)
+                
                 
                 if let basicArray = backend?["Basic"] as? NSArray{
                     for cards in basicArray{
@@ -53,17 +63,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         let factions = Cards(dictionary: cards as! [String : AnyObject])
                         let rarities = Cards(dictionary: cards as! [String : AnyObject])
                         let images = Cards(dictionary: cards as! [String : AnyObject])
-         
-                        self.cardsArray.append(types)
-                        self.cardsArray.append(factions)
-                        self.cardsArray.append(rarities)
-                        self.cardsArray.append(images)
+                        let text = Cards(dictionary: cards as! [String : AnyObject])
+
+                        self.typeArray.append(types)
+                        self.factionArray.append(factions)
+                        self.rarityArray.append(rarities)
+                        self.imageArray.append(images)
+                        self.textArray.append(text)
 
                     }
-                    
                     self.collectionView.reloadData()
                 }
-
+ 
             } else {
                 
             }
@@ -80,13 +91,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    func registerSectionHeaderNIb() {
+        
+        let nib = UINib(nibName: "CollectionSectionHeaderView", bundle: nil)
+        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
+    }
     //MARK: - UICOLLECTIONVIEW 
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfSections section: Int) -> Int {
+        
+        return (self.sectionHeaderArray?.count)!
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.cardsArray.count
-    
-    
+        return self.typeArray.count
     }
     
     
@@ -94,18 +113,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
-        let item = self.cardsArray[indexPath.row]
-        customCell.ibresType.text = item.cardType
-        customCell.ibresFaction.text = item.cardFaction
-        customCell.ibresRarity.text = item.cardRarity
-        if item.cardImage == "" {
+        let itemType = self.typeArray[indexPath.row]
+        customCell.ibresType.text = itemType.cardType
+        let itemFaction  = self.factionArray[indexPath.row]
+        customCell.ibresFaction.text = itemFaction.cardFaction
+        let itemrarity = self.rarityArray[indexPath.row]
+        customCell.ibresRarity.text = itemrarity.cardRarity
+        let itemImage = self.imageArray[indexPath.row]
+
+        if itemImage.cardImage == "" {
             
         } else{
-            customCell.ibImageView.image = UIImage(named: item.cardImage)
+
+            customCell.ibImageView.image = UIImage(named: itemImage.cardImage)
         }
+
         return customCell
         
     }
+    
+    
+   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
+        
+       
+        let item = self.sectionHeaderArray?[indexPath.row]
+        sectionHeaderView.ibSectionHeader.text = item as? String
+
+        return sectionHeaderView
+    }*/
+
 
     
 

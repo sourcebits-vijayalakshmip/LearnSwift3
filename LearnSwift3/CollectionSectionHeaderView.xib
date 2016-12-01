@@ -9,21 +9,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="9q7-GH-MhS" customClass="CollectionSectionHeaderView" customModule="LearnSwift3" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-1y-z84">
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.97896283864974976" green="0.3013249933719635" blue="0.033994700759649277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="AlX-1y-z84" firstAttribute="leading" secondItem="9q7-GH-MhS" secondAttribute="leading" constant="72" id="GFY-WC-Oa0"/>
-                <constraint firstItem="AlX-1y-z84" firstAttribute="top" secondItem="9q7-GH-MhS" secondAttribute="top" constant="20" id="Hth-9W-uSX"/>
+                <constraint firstItem="AlX-1y-z84" firstAttribute="top" secondItem="9q7-GH-MhS" secondAttribute="top" constant="14" id="Hth-9W-uSX"/>
                 <constraint firstAttribute="trailing" secondItem="AlX-1y-z84" secondAttribute="trailing" constant="72" id="dCq-WT-17g"/>
-                <constraint firstAttribute="bottom" secondItem="AlX-1y-z84" secondAttribute="bottom" constant="20" id="tNy-4R-D3s"/>
+                <constraint firstAttribute="bottom" secondItem="AlX-1y-z84" secondAttribute="bottom" constant="12" id="tNy-4R-D3s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

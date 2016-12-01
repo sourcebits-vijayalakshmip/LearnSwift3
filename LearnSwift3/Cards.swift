@@ -17,24 +17,23 @@ class Cards : NSObject {
     var cardRarity = String()
     var cardImage = String()
     var sectionHeaderArray = NSArray()
+    var cardText = String()
+    
     
 
     
-    init(cardType: String?,cardFaction: String?,cardRarity: String?,cardName: String?,cardImage: String?, sectionHeaderArray: NSArray?){
+    init(cardType: String?,cardFaction: String?,cardRarity: String?,cardName: String?,cardImage: String?, sectionHeaderArray: NSArray?, cardText: String?){
         
         self.cardType = cardType!
         self.cardFaction = cardFaction!
         self.cardRarity = cardRarity!
         self.sectionHeaderArray = sectionHeaderArray!
         self.cardImage = cardImage!
+        self.cardText = cardText!
 
     }
     
-    init(array: [String: AnyObject]) {
-        
-        self.sectionHeaderArray = array["keys"] as! NSArray
-
-    }
+   
     init(dictionary : [ String: AnyObject]){
         
         self.cardType = dictionary["type"] as! String
@@ -52,6 +51,14 @@ class Cards : NSObject {
             self.cardImage = dictionary["img"] as! String
             
         }
+        if dictionary["text"] as? String == nil {
+
+        } else{
+            self.cardText = dictionary["text"] as! String
+
+        }
+        
+
     }
     
     
