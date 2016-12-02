@@ -35,6 +35,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         fetchAllCards()
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,20 +49,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         isValue = true
         self.collectionView.reloadData()
         MBProgressHUD.hide(for: self.view, animated: true)
-
-  
     }
-//    
-//    @IBAction func getAllCards(_ sender: AnyObject) {
-//        
-//        MBProgressHUD.showAdded(to: self.view, animated: true)
-//        isValue = false
-//        self.collectionView.reloadData()
-//        MBProgressHUD.hide(for: self.view, animated: true)
-//
-//
-//    }
-     // API CALL
+    
+    
+    // API CALL
     func fetchAllCards() -> Void {
         
         APIManager.shared.cardsInformation()  { (backend, error) in
@@ -95,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     }
                     self.collectionView.reloadData()
                 }
-                /*if let classicArray = backend?["Classic"] as? NSArray{
+                if let classicArray = backend?["Classic"] as? NSArray{
                     for cards in classicArray{
                         let types = Cards(dictionary: cards as! [String : AnyObject])
                         let factions = Cards(dictionary: cards as! [String : AnyObject])
@@ -398,7 +389,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         
                     }
                     self.collectionView.reloadData()
-                }*/
+                }
 
 
 
@@ -468,6 +459,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             customCell.ibresType.isHidden = true
             customCell.ibresFaction.isHidden = true
             customCell.ibresRarity.isHidden = true
+            
+            customCell.ibLblType.isHidden = true
+            customCell.ibLblRarity.isHidden = true
+            customCell.ibLblFaction.isHidden = true
 
             
         }
@@ -475,6 +470,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return customCell
         
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize.init(width: self.collectionView.frame.size.width + 20, height: 150)
+    }
+    
     
     
    /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
