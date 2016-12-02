@@ -29,7 +29,7 @@
             <connections>
                 <outlet property="ibSectionHeader" destination="AlX-1y-z84" id="7pS-92-kG9"/>
             </connections>
-            <point key="canvasLocation" x="-179.5" y="-169.5"/>
+            <point key="canvasLocation" x="-179.5" y="-170"/>
         </view>
     </objects>
 </document>

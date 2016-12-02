@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCollectionViewCell" id="64O-Yv-dUt" customClass="CustomCollectionViewCell" customModule="LearnSwift3" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-mY-LbL">
@@ -41,8 +41,15 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfI-Lg-6YK">
+                            <frame key="frameInset" minX="31" minY="13" width="296" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7Q-UO-QLa">
-                            <frame key="frameInset" minX="31" minY="25" width="87" height="64"/>
+                            <frame key="frameInset" minX="31" minY="53" width="87" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
@@ -64,11 +71,12 @@
             <connections>
                 <outlet property="ibImageView" destination="V7Q-UO-QLa" id="hZi-XP-qrd"/>
                 <outlet property="ibresFaction" destination="EMw-Lb-7dU" id="pMW-9z-vRV"/>
+                <outlet property="ibresImageUrl" destination="DfI-Lg-6YK" id="xrA-7w-2z8"/>
                 <outlet property="ibresRarity" destination="PxV-fs-4ne" id="paB-UA-G7G"/>
                 <outlet property="ibresType" destination="aNX-pl-iAH" id="AW7-lQ-ufV"/>
                 <outlet property="ibtext" destination="SAD-I0-WAV" id="N5d-wk-V1B"/>
             </connections>
-            <point key="canvasLocation" x="-69.5" y="-17.5"/>
+            <point key="canvasLocation" x="-69.5" y="-2"/>
         </collectionReusableView>
     </objects>
 </document>

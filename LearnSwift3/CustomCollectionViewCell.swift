@@ -17,4 +17,5 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet var ibresFaction: UILabel!
     @IBOutlet var ibresRarity: UILabel!
 //    @IBOutlet var ibresText: UILabel!
+    @IBOutlet var ibresImageUrl: UILabel!
 }
