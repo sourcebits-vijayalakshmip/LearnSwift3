@@ -460,9 +460,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             customCell.ibresFaction.isHidden = true
             customCell.ibresRarity.isHidden = true
             
-            customCell.ibLblType.isHidden = true
-            customCell.ibLblRarity.isHidden = true
-            customCell.ibLblFaction.isHidden = true
+            //customCell.ibLblType.isHidden = true
+            //customCell.ibLblRarity.isHidden = true
+            //customCell.ibLblFaction.isHidden = true
 
             
         }
