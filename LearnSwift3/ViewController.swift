@@ -86,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     }
                     self.collectionView.reloadData()
                 }
-                if let classicArray = backend?["Classic"] as? NSArray{
+                /*if let classicArray = backend?["Classic"] as? NSArray{
                     for cards in classicArray{
                         let types = Cards(dictionary: cards as! [String : AnyObject])
                         let factions = Cards(dictionary: cards as! [String : AnyObject])
@@ -389,7 +389,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         
                     }
                     self.collectionView.reloadData()
-                }
+                }*/
 
 
 
@@ -474,32 +474,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize.init(width: self.collectionView.frame.size.width + 20, height: 150)
+        return CGSize.init(width: 130, height: 180)
     }
     
     
-    
-   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let sectionHeaderView: CollectionSectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
-        
-        /*for items in self.getarrays!{
-            
-            sectionHeaderView.ibSectionHeader.text = items as? String
-
-        }*/
-        print("count..", self.dict)
-        
-        for item in self.getarrays! {
-            
-            print("item..", item)
-        }
-        sectionHeaderView.ibSectionHeader.text = self.getarrays![indexPath.row] as? String
-
-        return sectionHeaderView
-    } */
-
-
+  
     
 
 }
