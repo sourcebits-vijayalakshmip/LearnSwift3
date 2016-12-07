@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="667" id="MjP-II-wYv"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DZJ-xF-mxl">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DZJ-xF-mxl">
                                     <size key="itemSize" width="359" height="149"/>
                                     <size key="headerReferenceSize" width="50" height="1"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>

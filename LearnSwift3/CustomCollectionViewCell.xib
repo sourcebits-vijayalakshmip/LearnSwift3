@@ -56,13 +56,13 @@
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="leading" secondItem="SAD-I0-WAV" secondAttribute="leading" constant="8" id="7ot-zO-d4K"/>
-                        <constraint firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" id="8QB-fY-Rnt"/>
-                        <constraint firstItem="SAD-I0-WAV" firstAttribute="top" secondItem="Iae-mY-LbL" secondAttribute="top" id="He5-Jn-VxC"/>
-                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" id="QpP-4i-eu5"/>
-                        <constraint firstAttribute="bottom" secondItem="SAD-I0-WAV" secondAttribute="bottom" id="RGF-vz-eMh"/>
-                        <constraint firstItem="SAD-I0-WAV" firstAttribute="leading" secondItem="Iae-mY-LbL" secondAttribute="leading" id="Vha-nZ-Wcm"/>
-                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="top" secondItem="SAD-I0-WAV" secondAttribute="top" constant="13" id="qtq-P9-jCW"/>
+                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="leading" secondItem="SAD-I0-WAV" secondAttribute="leading" constant="19" id="7ot-zO-d4K"/>
+                        <constraint firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" constant="-11" id="8QB-fY-Rnt"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="top" secondItem="Iae-mY-LbL" secondAttribute="top" constant="-7" id="He5-Jn-VxC"/>
+                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="trailing" secondItem="SAD-I0-WAV" secondAttribute="trailing" constant="-11" id="QpP-4i-eu5"/>
+                        <constraint firstAttribute="bottom" secondItem="SAD-I0-WAV" secondAttribute="bottom" constant="-10" id="RGF-vz-eMh"/>
+                        <constraint firstItem="SAD-I0-WAV" firstAttribute="leading" secondItem="Iae-mY-LbL" secondAttribute="leading" constant="-11" id="Vha-nZ-Wcm"/>
+                        <constraint firstItem="DfI-Lg-6YK" firstAttribute="top" secondItem="SAD-I0-WAV" secondAttribute="top" constant="20" id="qtq-P9-jCW"/>
                     </constraints>
                 </view>
             </subviews>
